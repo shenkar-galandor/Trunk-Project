@@ -1,0 +1,188 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Open Sans Hebrew;
+}
+footer, header, nav, main, aside, article, section {
+	display: block;
+}
+body {
+	
+}
+header {
+	background: #021f54;
+	height: 62px;
+}
+#logo {
+	display: block;
+	color: #fff;
+	font-size: 26px;
+	text-decoration: none;
+	font-weight: bold;
+	padding-top: 15px;
+	float: left;
+}
+#register {
+	background: #72bb53;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 14px;
+	border: 0;
+	padding: 5px 15px 5px 15px;
+	margin-top: 18px;
+	float: right;
+	outline:none;
+}
+aside {
+	height: 150px;
+	background-image: url(https://subtlepatterns.com/patterns/sayagata-400px.png);
+	background-attachment: fixed;
+	background-position: bottom;
+}
+aside section {
+	height: 100%;
+	width: 285px;
+	text-align: center;
+	margin-top: 39px;
+	float: left;
+}
+aside h4 {
+	margin: 0;
+	color: #337ab7;
+	font-size: 46px;
+	font-weight: bold;
+}
+aside h5 {
+	color: #337ab7;
+	font-size: 21px;
+	font-weight: bold;
+}
+main article:nth-child(1) {
+	height: 500px;
+	background: url(../images/mainpic.jpg) no-repeat center, linear-gradient(90deg, #fff 50%, #021f54 50%);
+}
+main article section {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+main article section:nth-child(1) h1 {
+	color: #021f54;
+	font-size: 48px;
+	font-weight: bold;
+	margin-top: 70px;
+}
+main article section:nth-child(1) p {
+	color: #033076;
+	font-size: 14px;
+	font-weight: bold;
+}
+main article section:nth-child(2) h1 {
+	color: #fff;
+	font-size: 48px;
+	font-weight: bold;
+	margin-top: 70px;
+}
+main article section:nth-child(2) p {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+}
+section:nth-child(1) .mainIcon {
+	color: #021f54;
+	font-size: 200px;
+	display: block;
+}
+section:nth-child(2) .mainIcon {
+	color: #fff;
+	font-size: 200px;
+	display: block;
+}
+main button {
+	height: 70px;
+	width: 200px;
+	background: #72bb53;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 28px;
+	font-weight: bold;
+	border: 0;
+	margin-top: 40px;
+	outline:none;
+}
+main button span {
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+	outline:none;
+}
+main article:nth-child(2) {
+	height: 330px;
+	background-image: url(https://subtlepatterns.com/patterns/sayagata-400px.png);
+	background-attachment: fixed;
+	background-position: bottom;
+}
+main article:nth-child(2) div {
+	position: relative;
+	bottom: 35px;
+}
+main h2 {
+	color: #337ab7;
+	font-size: 36px;
+	font-weight: bold;
+}
+main article:nth-child(2) p {
+	margin: 0 auto;
+	color: #000;
+	font-size: 16px;
+	max-width: 540px;
+}
+.circle {
+	position: relative;
+	top: -10px;
+	margin: 0 auto;
+	height: 100px;
+	width: 100px;
+	border: 0;
+	border-radius: 50%;
+	background: #72bb53;
+}
+.circle i {
+	position: relative;
+	top: 22%;
+	font-size: 60px;
+	color: #fff;
+}
+footer {
+	background: #021f54;
+	height: 155px;
+}
+footer section:nth-child(1){
+	float:left;
+	width:50%;
+	margin-top:30px;
+}
+footer section:nth-child(2){
+	float:right;
+	width:50%;
+	direction:rtl;
+	text-align:right;
+	color:#fff;
+	margin-top:15px;
+}
+footer section p:last-child {
+	margin-top:40px;
+}
+footer p{
+	margin:0;
+	color:#fff;
+	font-size:12px;
+}
+footer h5{
+	font-weight:bold;
+	font-size:18px;
+}
+footer li{
+	font-size:13px;
+}
