@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Live Trucking Finder">
+	<meta name="author" content="Gal Amitai, Or Adar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trunk - LIVE Trucking Finder</title>
+	<!-- Jquery & Javascript link -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="includes/script.js"></script>
+	<!-- Adding Bootstrap CSS & JS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/opensanshebrew.css">
+	<!-- CSS Icons FontAwesome -->
+	<script src="https://use.fontawesome.com/965c02018c.js"></script>
+	<link rel="stylesheet" href="includes/style.css">
+</head>
+<body id="panel">
+
+<header>
+	<div class="container">
+		<a href="#" id="logo">Truck.co.il</a>
+		<section>
+			<i class="fa fa-comment" aria-hidden="true"></i>
+			<i class="fa fa-bell" aria-hidden="true"></i>
+			<button id="dashboard">פאנל ניהול</button>
+			<i class="fa fa-user" aria-hidden="true"></i>
+			<i class="fa fa-sort-desc" aria-hidden="true"></i>
+		</section>
+	</div>
+</header>
+
+<aside>
+	<div class="container">
+		<section>
+			<h5>סה"כ מוצרים הועברו</h5>
+			<h4>162</h4>
+		</section>
+		<section>
+			<h5>ההובלות שבוצעו</h5>
+			<h4>7</h4>
+		</section>
+		<section>
+			<h5>ההובלות בהמתנה</h5>
+			<h4>1</h4>
+		</section>
+		<section>
+			<h5>ההובלות שלי</h5>
+			<h4>8</h4>
+		</section>
+	</div>
+</aside>
+
+<!-- Breadcrumbs -->
+<div class="container">
+	<ul id="breadcrumbs">
+		<li><a href="index.html">עמוד הבית <i class="fa fa-home" aria-hidden="true"></i></a></li>
+		<li>איזור אישי</li>
+	</ul>
+<!-- End Breadcrumbs -->
+<main>
+	<nav>
+		<ul>
+			<li>איזור אישי</li>
+			<li><a href="#">תיאום הובלה חדשה</a></li>
+			<li><a href="#">ההובלות שלי</a></li>
+			<li><a href="#">הודעות ועדכונים</a></li>
+			<li><a href="#">לוח שנה</a></li>
+			<li><a href="#">הפרופיל שלי</a></li>
+			<li><a href="#">עריכת פרטים אישיים</a></li>
+		</ul>
+	</nav>
+
+	<section>
+		<article>
+			<i class="fa fa-user fa-5x" aria-hidden="true"></i>
+		</article>
+		<p>ברוך הבא יוגב,<br>
+		ביקורך האחרון בתאריך 17\6\16 בשעה 08:32.<br>
+		<span class="count">0</span> הודעות \ עידכונים חדשים.</p>
+	</section>
+
+	<aside id="calendar">
+		<div class="month">      
+		  <ul>
+		    <li class="prev">❮</li>
+		    <li class="next">❯</li>
+		    <li>August<br>
+		      <span>2016</span>
+		    </li>
+		  </ul>
+		</div>
+
+		<ul class="weekdays">
+		  <li>Mo</li>
+		  <li>Tu</li>
+		  <li>We</li>
+		  <li>Th</li>
+		  <li>Fr</li>
+		  <li>Sa</li>
+		  <li>Su</li>
+		</ul>
+
+		<ul class="days">  
+		  <li>1</li>
+		  <li>2</li>
+		  <li>3</li>
+		  <li>4</li>
+		  <li>5</li>
+		  <li>6</li>
+		  <li>7</li>
+		  <li>8</li>
+		  <li>9</li>
+		  <li><span class="active">10</span></li>
+		  <li>11</li>
+		  <li>12</li>
+		  <li>13</li>
+		  <li>14</li>
+		  <li>15</li>
+		  <li>16</li>
+		  <li>17</li>
+		  <li>18</li>
+		  <li>19</li>
+		  <li>20</li>
+		  <li>21</li>
+		  <li>22</li>
+		  <li>23</li>
+		  <li>24</li>
+		  <li>25</li>
+		  <li>26</li>
+		  <li>27</li>
+		  <li>28</li>
+		  <li>29</li>
+		  <li>30</li>
+		  <li>31</li>
+		</ul>
+	</aside>
+</main>
+</div>
+
+<footer>
+	<div class="container">
+		<section>
+			<p><i class="fa fa-phone" aria-hidden="true"></i> Phone: +972543551520</p>
+			<p><i class="fa fa-map-marker" aria-hidden="true"></i> Address: Derech Hashalom 15 Ramat-Gan</p>
+			<p><i class="fa fa-envelope-o" aria-hidden="true"></i> Email: trunk@gmail.com</p>
+			<p><i class="fa fa-copyright" aria-hidden="true"></i> All right received - Trunk.co.il - 2016</p>
+		</section>
+		<section>
+			<h5>ניווט מהיר</h5>
+			<ul>
+				<li><a href="#">דף ראשי</a></li>
+				<li><a href="#">מי אנחנו</a></li>
+				<li><a href="#">שאלות נפוצות</a></li>
+				<li><a href="#">צור קשר</a></li>
+			</ul>
+		</section>
+	</div>
+</footer>
+</body>
+</html>

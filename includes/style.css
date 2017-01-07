@@ -7,7 +7,7 @@ footer, header, nav, main, aside, article, section {
 	display: block;
 }
 body {
-	
+	background: #f7f6f6;
 }
 header {
 	background: #021f54;
@@ -22,15 +22,14 @@ header {
 	padding-top: 15px;
 	float: left;
 }
-#register {
+#dashboard {
 	background: #72bb53;
 	border-radius: 10px;
 	color: #fff;
 	font-size: 14px;
 	border: 0;
+	margin: 0 10px 0 10px;
 	padding: 5px 15px 5px 15px;
-	margin-top: 18px;
-	float: right;
 	outline:none;
 }
 aside {
@@ -41,10 +40,12 @@ aside {
 }
 aside section {
 	height: 100%;
-	width: 285px;
+	width: 275px;
 	text-align: center;
 	margin-top: 39px;
+	margin-right: 10px;
 	float: left;
+	border-radius: 3px;
 }
 aside h4 {
 	margin: 0;
@@ -183,6 +184,230 @@ footer h5{
 	font-weight:bold;
 	font-size:18px;
 }
-footer li{
+footer li a{
 	font-size:13px;
+	color: #fff;
+}
+
+/* End HOMEPAGE */
+
+/* Header */
+header section {
+	float: right;
+	margin-top: 14px;
+	color: #fff;
+	font-size: 22px;
+}
+header section i {
+	padding: 0 5px 0 5px;
+}
+#panel aside {
+	background: #f7f6f6;
+}
+#panel aside section {
+	padding-bottom: 10px;
+}
+#panel aside section:nth-child(1) {
+	background: #d9534f;
+}
+#panel aside section:nth-child(2) {
+	background: #5cb85c;
+}
+#panel aside section:nth-child(3) {
+	background: #f0ad4e;
+}
+#panel aside section:nth-child(4) {
+	background: #5bc0de;
+}
+#panel aside h4, #panel aside h5 {
+	color: #fff;
+}
+#breadcrumbs li{
+	list-style-type: none;
+	display: inline;
+	float: right;
+	margin-top: 15px;
+}
+#breadcrumbs li:not(:first-child):after{
+  content: ' | ';
+}
+#panel main {
+	margin-top: 50px;
+	direction: rtl;
+}
+#panel main section {
+	height: 540px;
+	width: 900px;
+	border: 1px solid #666;
+	background: #fff;
+	float: left;
+	padding: 30px 30px 0 0;
+	margin-bottom: 50px;
+	position: relative;
+}
+#panel main article {
+	background: none;
+	float:right;
+	padding-left: 20px;
+}
+.count {
+	background: #d9534f;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: bold;
+	padding: 0 8px 0 8px;
+}
+#panel main nav {
+	height: 270px;
+	width: 220px;
+	border: 1px solid #666;
+	background: #fff;
+	float: right;
+}
+#panel nav li {
+	list-style-type: none;
+	border-bottom: 1px solid #666;
+	padding: 9px 5px 9px 0;
+	font-weight: bold;
+}
+#panel nav li:first-child {
+	background: #999;
+}
+#panel nav li:last-child {
+	border-bottom: none;
+}
+#panel nav a, #panel nav a:visited {
+	color: #021f54;
+	font-weight: bold;
+}
+#panel #calendar {
+	height: 215px;
+	width: 220px;
+	border: 1px solid #666;
+	background: #fff;
+	float: right;
+	margin-top: 20px;
+}
+/* Calendar Style */
+.month {
+    padding: 0px 25px;
+    width: 100%;
+    background: #021f54;
+}
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+.month ul li {
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    list-style-type: none;
+}
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+.weekdays {
+    margin: 0;
+    background-color: #ddd;
+}
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    font-size:10px;
+    color: #777;
+}
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    border-radius: 50%;
+    color: white !important;
+}
+/* Step Wizard nav */
+.nav-wizard {
+	position: absolute;
+	top: 0px;
+	right:0px;
+}
+.nav-wizard > li {
+  float: left;
+}
+.nav-wizard > li > a {
+  position: relative;
+  background-color: #eeeeee;
+}
+.nav-wizard > li:not(:first-child) > a {
+  padding-left: 34px;
+}
+.nav-wizard > li:not(:first-child) > a:before {
+  width: 0px;
+  height: 0px;
+  border-top: 20px inset transparent;
+  border-bottom: 20px inset transparent;
+  border-left: 20px solid #ffffff;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+}
+.nav-wizard > li:not(:last-child) > a {
+  margin-right: 6px;
+}
+.nav-wizard > li:not(:last-child) > a:after {
+  width: 0px;
+  height: 0px;
+  border-top: 20px inset transparent;
+  border-bottom: 20px inset transparent;
+  border-left: 20px solid #eeeeee;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -20px;
+  z-index: 2;
+}
+.nav-wizard > li:hover > a {
+  background-color: #d5d5d5;
+}
+.nav-wizard > li:hover > a:before {
+  border-right-color: #d5d5d5;
+}
+.nav-wizard > li:hover > a:after {
+  border-left-color: #d5d5d5;
+}
+.nav-wizard > li.active > a,
+.nav-wizard > li.active > a:hover,
+.nav-wizard > li.active > a:focus {
+  color: #ffffff;
+  background-color: #428bca;
+}
+.nav-wizard > li.active > a:after {
+  border-right-color: #428bca;
+}
+/* End Wizard nav */
+
+main h1 {
+	color: #033076;
+	font-size: 36px;
+	font-weight: bold;
+	margin-top: 30px;
 }
