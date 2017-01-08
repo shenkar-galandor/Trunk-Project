@@ -201,6 +201,7 @@ header section {
 header section i {
 	padding: 0 5px 0 5px;
 }
+
 #panel aside {
 	background: #f7f6f6;
 }
@@ -222,6 +223,8 @@ header section i {
 #panel aside h4, #panel aside h5 {
 	color: #fff;
 }
+
+/* Breadcrumbs */
 #breadcrumbs li{
 	list-style-type: none;
 	display: inline;
@@ -231,6 +234,7 @@ header section i {
 #breadcrumbs li:not(:first-child):after{
   content: ' | ';
 }
+
 #panel main {
 	margin-top: 50px;
 	direction: rtl;
@@ -241,11 +245,11 @@ header section i {
 	border: 1px solid #666;
 	background: #fff;
 	float: left;
-	padding: 30px 30px 0 0;
+	padding: 0 30px 0 0;
 	margin-bottom: 50px;
 	position: relative;
 }
-#panel main article {
+#panel main i {
 	background: none;
 	float:right;
 	padding-left: 20px;
@@ -258,7 +262,7 @@ header section i {
 	padding: 0 8px 0 8px;
 }
 #panel main nav {
-	height: 270px;
+	height: 225px;
 	width: 220px;
 	border: 1px solid #666;
 	background: #fff;
@@ -267,7 +271,7 @@ header section i {
 #panel nav li {
 	list-style-type: none;
 	border-bottom: 1px solid #666;
-	padding: 9px 5px 9px 0;
+	padding: 12px 5px 12px 0;
 	font-weight: bold;
 }
 #panel nav li:first-child {
@@ -281,7 +285,7 @@ header section i {
 	font-weight: bold;
 }
 #panel #calendar {
-	height: 215px;
+	height: 216px;
 	width: 220px;
 	border: 1px solid #666;
 	background: #fff;
@@ -355,35 +359,35 @@ header section i {
 .nav-wizard > li > a {
   position: relative;
   background-color: #eeeeee;
+  padding: 10px 62.5px 10px 59px;
 }
 .nav-wizard > li:not(:first-child) > a {
-  padding-left: 34px;
+  padding-right: 53px;
 }
 .nav-wizard > li:not(:first-child) > a:before {
-  width: 0px;
-  height: 0px;
-  border-top: 20px inset transparent;
-  border-bottom: 20px inset transparent;
-  border-left: 20px solid #ffffff;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
+    width: 0px;
+    height: 0px;
+    border-top: 20px inset transparent;
+    border-bottom: 20px inset transparent;
+    border-right: 20px solid #eee;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -20px;
 }
 .nav-wizard > li:not(:last-child) > a {
   margin-right: 6px;
 }
 .nav-wizard > li:not(:last-child) > a:after {
-  width: 0px;
-  height: 0px;
-  border-top: 20px inset transparent;
-  border-bottom: 20px inset transparent;
-  border-left: 20px solid #eeeeee;
-  position: absolute;
-  content: "";
-  top: 0;
-  right: -20px;
-  z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-top: 20px inset transparent;
+    border-bottom: 20px inset transparent;
+    border-right: 20px solid #fff;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0px;
 }
 .nav-wizard > li:hover > a {
   background-color: #d5d5d5;
@@ -400,7 +404,7 @@ header section i {
   color: #ffffff;
   background-color: #428bca;
 }
-.nav-wizard > li.active > a:after {
+.nav-wizard > li.active > a:before {
   border-right-color: #428bca;
 }
 /* End Wizard nav */
@@ -409,5 +413,35 @@ main h1 {
 	color: #033076;
 	font-size: 36px;
 	font-weight: bold;
-	margin-top: 30px;
+}
+.nav-step {
+	padding: 40px 0 20px 0;
+}
+
+#wizard article {
+	padding-left: 30px;
+}
+#wizard .form-control {
+	margin: 5px 0 5px 0;
+}
+#wizard .form-group {
+	direction: rtl;
+	width: 400px;
+}
+#wizard .radio-inline {
+	padding: 0px 0px 0px 60px;
+}
+.floor {
+	width: 114px;
+	display: inline-block;
+}
+.nextStep {
+	position:absolute;
+	bottom: 20px;
+	left: 20px;
+	width: 200px;
+	height: 50px;
+	background: #033076;
+	color: #fff;
+	font-size: 28px;
 }
