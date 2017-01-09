@@ -57,7 +57,8 @@
 <div class="container">
 	<ul id="breadcrumbs">
 		<li><a href="index.html">עמוד הבית <i class="fa fa-home" aria-hidden="true"></i></a></li>
-		<li>איזור אישי</li>
+		<li><a href="#">איזור אישי</a></li>
+		<li>ההובלות שלי</li>
 	</ul>
 <!-- End Breadcrumbs -->
 <main>
@@ -65,18 +66,101 @@
 		<ul>
 			<li>איזור אישי</li>
 			<li><a href="createNewTrunk.html">תיאום הובלה חדשה</a></li>
-			<li><a href="myTrunks.html">ההובלות שלי</a></li>
+			<li><a href="myTrunks.html">> ההובלות שלי</a></li>
 			<li><a href="#">הודעות ועדכונים</a></li>
 			<li><a href="#">הפרופיל שלי</a></li>
 		</ul>
 	</nav>
 
 	<section>
-    	<h1>איזור אישי</h1>
-		<i class="fa fa-user fa-5x" aria-hidden="true"></i>
-		<p>ברוך הבא יוגב,<br>
-		ביקורך האחרון בתאריך 17\6\16 בשעה 08:32.<br>
-		<span class="count">0</span> הודעות \ עידכונים חדשים.</p>
+    	<h1>ההובלות שלי</h1>
+    	<table class="table table-bordered myTrunkTable">
+	    <thead>
+	      <tr>
+	        <th>מספר הובלה</th>
+	        <th>סוג הובלה</th>
+	        <th>מיקום</th>
+	        <th>יעד</th>
+	        <th>תאריך</th>
+	        <th>הצעות שנתקבלו</th>
+	        <th>סטטוס הובלה</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td>165487</td>
+	        <td>מעבר דירה</td>
+	        <td>התפוז 15 אשקלון</td>
+	        <td>דרך יבנה 17 רחובות</td>
+	        <td>25/08/16</td>
+	        <td class="text-center"><button type="button" id="#myModal" data-toggle="modal" data-target="#myModal">בחר הצעה <span>1</span></button></td>
+	        <td class="awating">ממתין לאישור</td>
+	      </tr>
+	      <tr>
+	        <td>362487</td>
+	        <td>פריט בודד</td>
+	        <td>המורן 5 רחובות</td>
+	        <td>שנקין 5 תל-אביב</td>
+	        <td>21/08/16</td>
+	        <td class="text-center"><button>בחר הצעה</button></td>
+	        <td class="approved">מאושר</td>
+	      </tr>
+	      
+	    </tbody>
+	  </table>
+
+	  <!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <a href=#_" type="button" class="close" data-dismiss="modal">&times;</a>
+		        <h4 class="modal-title">הצעות שנתקבלו</h4>
+		      </div>
+		      <div class="modal-body">
+		        <table class="table table-bordered myTrunkTable">
+				    <thead>
+				      <tr>
+				        <th>שם המוביל</th>
+				        <th>סוג המוביל</th>
+				        <th>מיקום</th>
+				        <th>תאריך</th>
+				        <th>שעה</th>
+				        <th>דירוג הלקוחות</th>
+				        <th>הצעת מחיר</th>
+				        <th>בחירת הצעה</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>מריומה הובלות</td>
+				        <td>חברה</td>
+				        <td>יבנה</td>
+				        <td>25/08/16</td>
+				        <td>08:00</td>
+				        <td class="text-center">
+				        	<img src="images/stars.png">
+				        	<img src="images/stars.png">
+				        	<img src="images/stars.png">
+				        	<img src="images/stars.png">
+				        	<img src="images/stars.png">
+				        </td>
+				        <td>₪4500</td>
+				        <td class="text-center"><a href="myTrunks2.html"><button type="button" id="#myModal" data-toggle="modal" data-target="#myModal">בחר הצעה</button></a></td>
+				      </tr>				      
+				    </tbody>
+				  </table>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" data-dismiss="modal">סגור</button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+
 	</section>
 
 	<aside id="calendar">
@@ -110,7 +194,7 @@
 		  <li>7</li>
 		  <li>8</li>
 		  <li>9</li>
-		  <li><span class="active">10</span></li>
+		  <li>10</li>
 		  <li>11</li>
 		  <li>12</li>
 		  <li>13</li>
@@ -121,7 +205,7 @@
 		  <li>18</li>
 		  <li>19</li>
 		  <li>20</li>
-		  <li>21</li>
+		  <li><span class="active">21</span></li>
 		  <li>22</li>
 		  <li>23</li>
 		  <li>24</li>

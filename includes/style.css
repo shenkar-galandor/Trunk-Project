@@ -32,6 +32,10 @@ header {
 	padding: 5px 15px 5px 15px;
 	outline:none;
 }
+a {
+	color: #fff;
+	text-decoration: none;
+}
 aside {
 	height: 150px;
 	background-image: url(https://subtlepatterns.com/patterns/sayagata-400px.png);
@@ -234,6 +238,9 @@ header section i {
 #breadcrumbs li:not(:first-child):after{
   content: ' | ';
 }
+#breadcrumbs a, #breadcrumbs a:visited {
+	color: #0000ff;
+}
 
 #panel main {
 	margin-top: 50px;
@@ -241,11 +248,11 @@ header section i {
 }
 #panel main section {
 	min-height: 570px;
-	width: 900px;
+	width: 870px;
 	border: 1px solid #666;
 	background: #fff;
 	float: left;
-	padding: 0 30px 0 0;
+	padding: 0 30px 0 30px;
 	margin-bottom: 50px;
 	position: relative;
 }
@@ -359,10 +366,12 @@ header section i {
 .nav-wizard > li > a {
   position: relative;
   background-color: #eeeeee;
-  padding: 10px 62.5px 10px 59px;
+  padding: 10px 56px 10px 54.5px;
+  color: #000;
 }
 .nav-wizard > li:not(:first-child) > a {
   padding-right: 53px;
+
 }
 .nav-wizard > li:not(:first-child) > a:before {
     width: 0px;
@@ -445,7 +454,10 @@ main h1 {
 	color: #fff;
 	font-size: 28px;
 }
-
+.nextStep:hover a{
+	text-decoration: none;
+	color: #fff;
+}
 article h2{
 	font-size: 26px;
 	color:#033076;
@@ -456,28 +468,26 @@ article form input[type=search]{
 	background: url("../images/search.png") no-repeat 8px;
 }
 
-article label{
+.itemForm label{
 	display: block;
 	padding-bottom:4px;
 }
 
-
-article form input[type=text]{
+.itemForm input[type=text]{
 	width: 200px;
 	height: 30px;
 }
 
-article form select[type=text]{
+.itemForm select[type=text]{
 	width: 200px;
 	height: 30px;
 }
 
-article form input[type=checkbox]{
+.itemForm input[type=checkbox]{
 	position: relative;
 	right:10px;
 	top:3px;
 }
-
 .form-horizontal button{
 	height: 40px;
 	width: 143px;
@@ -603,15 +613,54 @@ article form input[type=checkbox]{
 	height: 37px;
 	font-size: 18px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+/* My Trunks */
+.myTrunkTable th{
+	text-align: right;
+	color: #fff;
+	background: #021f54;
+}
+.modal-body .myTrunkTable th {
+	background: #ffb253;
+}
+.myTrunkTable tr:nth-child(2n+0) {
+    background: #fafafa;
+}
+.myTrunkTable button {
+	width: 100px;
+	height: 20px;
+	border-radius: 10px;
+	font-size: 12px;
+	margin: 0 0 0 0;
+}
+.myTrunkTable span {
+	display: inline;
+	padding: 0px 4px 0px 4px;
+	border-radius: 10px;
+	font-size: 12px;
+	background: #ff0000;
+}
+.awating {
+	font-weight: bold;
+	text-align: center;
+	color: #ff5d55;
+}
+.approved {
+	font-weight: bold;
+	text-align: center;
+	color: #72bb53;
+}
+.modal-dialog {
+	margin:0 auto;
+	margin-top: 5%;
+	width: 900px;
+}
+.modal-title {
+	text-align: center;
+	font-weight: bold;
+	color:#021f54;
+}
+.modal-footer button {
+	height: 40px;
+	width: 50px;
+	font-size: 16px;
+}

@@ -57,14 +57,15 @@
 <div class="container">
 	<ul id="breadcrumbs">
 		<li><a href="index.html">עמוד הבית <i class="fa fa-home" aria-hidden="true"></i></a></li>
-		<li>איזור אישי</li>
+		<li><a href="dashboard.html">איזור אישי</a></li>
+		<li>תיאום הובלה חדשה</li>
 	</ul>
 <!-- End Breadcrumbs -->
-<main>
+<main id="wizard">
 	<nav>
 		<ul>
 			<li>איזור אישי</li>
-			<li><a href="createNewTrunk.html">תיאום הובלה חדשה</a></li>
+			<li><a href="createNewTrunk.html">> תיאום הובלה חדשה</a></li>
 			<li><a href="myTrunks.html">ההובלות שלי</a></li>
 			<li><a href="#">הודעות ועדכונים</a></li>
 			<li><a href="#">הפרופיל שלי</a></li>
@@ -72,11 +73,49 @@
 	</nav>
 
 	<section>
-    	<h1>איזור אישי</h1>
-		<i class="fa fa-user fa-5x" aria-hidden="true"></i>
-		<p>ברוך הבא יוגב,<br>
-		ביקורך האחרון בתאריך 17\6\16 בשעה 08:32.<br>
-		<span class="count">0</span> הודעות \ עידכונים חדשים.</p>
+		<ul class="nav nav-wizard">
+		    <li><a href="createNewTrunk_Step4.html">פרסום</a></li>
+		    <li><a href="createNewTrunk_Step3.html">אימות פרטים</a></li>
+		    <li><a href="createNewTrunk_Step2.html">הוספת פריטים</a></li>
+		    <li class="active"><a href="createNewTrunk_Step1.html">פרטי הובלה</a></li>
+		    <li><a href="createNewTrunk.html">סוג הובלה</a></li>
+		</ul>
+
+		<h1 class="nav-step">הובלה - מעבר דירה</h1>
+        <article>
+        	<form action="createNewTrunk_Step2.html">
+              <div class="form-group">
+                <label for="exampleInputEmail1">מיקום ההובלה</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="מיקום הובלה">
+              </div>
+              <label class="radio-inline">
+              	בית קרקע<input type="radio" value="option1">
+              </label>
+              <label class="radio-inline">
+              	בניין קומות<input type="radio" value="option2" checked>
+              </label>
+              <label for="exampleInputPassword1">קומה</label>
+                <input type="text" class="form-control floor" id="" placeholder="קומה">
+              <div class="form-group">
+                <label for="exampleInputPassword1">יעד ההובלה</label>
+                <input type="text" class="form-control"  placeholder="יעד הובלה">
+              </div>
+              <label class="radio-inline">
+              	בית קרקע<input type="radio" name="" value="option1" checked>
+              </label>
+              <label class="radio-inline">
+              	בניין קומות<input type="radio" name="" value="option2">
+              </label>
+              <label for="exampleInputPassword1">קומה</label>
+                <input type="text" class="form-control floor" id="exampleInputPassword1" placeholder="קומה" disabled>
+              <div class="form-group">
+                <label for="exampleInputEmail1">תאריך</label>
+                <input type="date" class="form-control" id="exampleInputEmail1">
+              </div>
+                <br>
+              <button class="nextStep">המשך</button>
+            </form>
+        </article>
 	</section>
 
 	<aside id="calendar">

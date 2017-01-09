@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Live Trucking Finder">
+	<meta name="description" content="Live Trunking Finder">
 	<meta name="author" content="Gal Amitai, Or Adar">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Trunk - תיאום הובלה חדשה</title>
+	<title>Trunk - LIVE Trunking Finder</title>
 	<!-- Jquery & Javascript link -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="includes/script.js"></script>
@@ -23,11 +23,11 @@
 	<div class="container">
 		<a href="#" id="logo">Trunk.co.il</a>
 		<section>
-			<i class="fa fa-comment" aria-hidden="true"></i>
-			<i class="fa fa-bell" aria-hidden="true"></i>
+			<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
 			<button id="dashboard">פאנל ניהול</button>
-			<i class="fa fa-user" aria-hidden="true"></i>
-			<i class="fa fa-sort-desc" aria-hidden="true"></i>
+			<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
 		</section>
 	</div>
 </header>
@@ -57,79 +57,112 @@
 <div class="container">
 	<ul id="breadcrumbs">
 		<li><a href="index.html">עמוד הבית <i class="fa fa-home" aria-hidden="true"></i></a></li>
-		<li><a href="dashboard.html">איזור אישי</a></li>
-		<li>תיאום הובלה חדשה</li>
+		<li><a href="#">איזור אישי</a></li>
+		<li>ההובלות שלי</li>
 	</ul>
 <!-- End Breadcrumbs -->
-<main id="wizard">
+<main>
 	<nav>
 		<ul>
 			<li>איזור אישי</li>
-			<li><a href="#">> תיאום הובלה חדשה</a></li>
-			<li><a href="#">ההובלות שלי</a></li>
+			<li><a href="createNewTrunk.html">תיאום הובלה חדשה</a></li>
+			<li><a href="myTrunks.html">> ההובלות שלי</a></li>
 			<li><a href="#">הודעות ועדכונים</a></li>
 			<li><a href="#">הפרופיל שלי</a></li>
 		</ul>
 	</nav>
 
 	<section>
-		<ul class="nav nav-wizard">
-		    <li><a href="#_">פרסום</a></li>
-		    <li><a href="#_">אימות פרטים</a></li>
-		    <li class="active"><a href="#_">הוספת פריטים</a></li>
-		    <li><a href="#_">פרטי הובלה</a></li>
-		    <li><a href="#">סוג הובלה</a></li>
-		</ul>
+    	<h1>ההובלות שלי</h1>
+    	<table class="table table-bordered myTrunkTable">
+	    <thead>
+	      <tr>
+	        <th>מספר הובלה</th>
+	        <th>סוג הובלה</th>
+	        <th>מיקום</th>
+	        <th>יעד</th>
+	        <th>תאריך</th>
+	        <th>הצעות שנתקבלו</th>
+	        <th>סטטוס הובלה</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td>165487</td>
+	        <td>מעבר דירה</td>
+	        <td>התפוז 15 אשקלון</td>
+	        <td>דרך יבנה 17 רחובות</td>
+	        <td>25/08/16</td>
+	        <td class="text-center"><button type="button" id="#myModal" data-toggle="modal" data-target="#myModal">בחר הצעה</button></td>
+	        <td class="approved">מאושר</td>
+	      </tr>
+	      <tr>
+	        <td>362487</td>
+	        <td>פריט בודד</td>
+	        <td>המורן 5 רחובות</td>
+	        <td>שנקין 5 תל-אביב</td>
+	        <td>21/08/16</td>
+	        <td class="text-center"><button>בחר הצעה</button></td>
+	        <td class="approved">מאושר</td>
+	      </tr>
+	      
+	    </tbody>
+	  </table>
 
-		<h1 class="nav-step">הובלה - מעבר דירה - הוספת פריטים</h1>
-		<article class="form-group form-group-lg">
-		        	<h2>הוספת פריטים</h2>
-		        	<form>
-		        		 <input class="form-control" type="search" id="formGroupInputLarge" placeholder="חיפוש מהיר">
-		        	</form>
-		</article>
-		<article class="form-group form-group-sm">
-		        	<h2>הוספת פריט</h2>
-		        	<form class="form-horizontal">
-			        	<label>שם פריט:<input class="form-control" type="text" placeholder=""></label>
-			        	<label >הערות:<input class="form-control" type="text" placeholder=""></label>
-			        	<label>גודל:
-				<select class="form-control" type="text">
-			  		 <option>קטן</option>
-			  		 <option>בינוני</option>
-			 		 <option>גדול</option>
-			  		 <option>גדול מאוד</option>
-				</select>
-				</label>
-				<label>שביר<input type="checkbox"></label>
-			        	<button type="submit">הוסף פריט</button>
-		        	</form>
-		</article>
-	
-			<article class="addedMenu">
-			<p class="addedMenuHead">סה"כ פריטים</p>
-			<ul>
-				<li>
-					<p class="item">קרטון גדול<span>x5</span></p>
-				     	<p class="description">שביר</p>
-				</li>
-				<li>
-					<p class="item">מכונת כביסה<span>x1</span></p>
-					<p class="description">שביר</p>
-				</li>
-				<li>
-					<p class="item">סלון גדול<span>x1</span></p>
-					<p class="description">3 חלקים סלון</p>
-				</li>
-				<li>
-					<p class="item">מקרר<span>x1</span></p>
-					<p class="description">עדין מאוד</p>
-				</li>
-				</ul>	
-				<p class="totalItems">סה"כ פריטים<span>8</span></p>
-				<button>המשך</button>
-			</article>
+	  <!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <a href=#_" type="button" class="close" data-dismiss="modal">&times;</a>
+		        <h4 class="modal-title">הצעות שנתקבלו</h4>
+		      </div>
+		      <div class="modal-body">
+		        <table class="table table-bordered myTrunkTable">
+				    <thead>
+				      <tr>
+				        <th>שם המוביל</th>
+				        <th>סוג המוביל</th>
+				        <th>מיקום</th>
+				        <th>תאריך</th>
+				        <th>שעה</th>
+				        <th>דירוג הלקוחות</th>
+				        <th>הצעת מחיר</th>
+				        <th>בחירת הצעה</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>מריומה הובלות</td>
+				        <td>חברה</td>
+				        <td>יבנה</td>
+				        <td>25/08/16</td>
+				        <td>08:00</td>
+				        <td class="text-center">
+				        	<img src="images/stars.png">
+				        	<img src="images/stars.png">
+				        	<img src="images/stars.png">
+				        	<img src="images/stars.png">
+				        	<img src="images/stars.png">
+				        </td>
+				        <td>₪4500</td>
+				        <td class="text-center"><button type="button" id="#myModal" data-toggle="modal" data-target="#myModal">בחר הצעה</button></td>
+				      </tr>				      
+				    </tbody>
+				  </table>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" data-dismiss="modal">סגור</button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+
 	</section>
+
 	<aside id="calendar">
 		<div class="month">      
 		  <ul>
@@ -161,7 +194,7 @@
 		  <li>7</li>
 		  <li>8</li>
 		  <li>9</li>
-		  <li><span class="active">10</span></li>
+		  <li>10</li>
 		  <li>11</li>
 		  <li>12</li>
 		  <li>13</li>
@@ -172,11 +205,11 @@
 		  <li>18</li>
 		  <li>19</li>
 		  <li>20</li>
-		  <li>21</li>
+		  <li><span class="active">21</span></li>
 		  <li>22</li>
 		  <li>23</li>
 		  <li>24</li>
-		  <li>25</li>
+		  <li><span class="active">25</span></li>
 		  <li>26</li>
 		  <li>27</li>
 		  <li>28</li>

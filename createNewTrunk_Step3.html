@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Live Trucking Finder">
+	<meta name="description" content="Live Trunking Finder">
 	<meta name="author" content="Gal Amitai, Or Adar">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Trunk - תיאום הובלה חדשה</title>
+	<title>Trunk - LIVE Trunking Finder</title>
 	<!-- Jquery & Javascript link -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="includes/script.js"></script>
@@ -21,13 +21,13 @@
 
 <header>
 	<div class="container">
-		<a href="#" id="logo">Truck.co.il</a>
+		<a href="#" id="logo">Trunk.co.il</a>
 		<section>
-			<i class="fa fa-comment" aria-hidden="true"></i>
-			<i class="fa fa-bell" aria-hidden="true"></i>
+			<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
 			<button id="dashboard">פאנל ניהול</button>
-			<i class="fa fa-user" aria-hidden="true"></i>
-			<i class="fa fa-sort-desc" aria-hidden="true"></i>
+			<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
 		</section>
 	</div>
 </header>
@@ -65,8 +65,8 @@
 	<nav>
 		<ul>
 			<li>איזור אישי</li>
-			<li><a href="#">> תיאום הובלה חדשה</a></li>
-			<li><a href="#">ההובלות שלי</a></li>
+			<li><a href="createNewTrunk.html">> תיאום הובלה חדשה</a></li>
+			<li><a href="myTrunks.html">ההובלות שלי</a></li>
 			<li><a href="#">הודעות ועדכונים</a></li>
 			<li><a href="#">הפרופיל שלי</a></li>
 		</ul>
@@ -74,21 +74,57 @@
 
 	<section>
 		<ul class="nav nav-wizard">
-		    <li class="active"><a href="#_">פרסום</a></li>
-		    <li><a href="#_">אימות פרטים</a></li>
-		    <li><a href="#_">הוספת פריטים</a></li>
-		    <li><a href="#_">פרטי הובלה</a></li>
-		    <li><a href="#">סוג הובלה</a></li>
+		    <li><a href="createNewTrunk_Step4.html">פרסום</a></li>
+		    <li class="active"><a href="createNewTrunk_Step3.html">אימות פרטים</a></li>
+		    <li><a href="createNewTrunk_Step2.html">הוספת פריטים</a></li>
+		    <li><a href="createNewTrunk_Step1.html">פרטי הובלה</a></li>
+		    <li><a href="createNewTrunk.html">סוג הובלה</a></li>
 		</ul>
 
-		<h1 class="nav-step">הובלה - מעבר דירה - פירסום</h1>
-        <article>
-        	<div class="accept">
-        		<h5>הפריטים נקלטו בהצלחה!</h5>
-        		<h5>בעוד מספר שניות הובלתך תופיע בלוח ההובלות</h5>
-        		<button>ההובלות שלי</button>
-        	</div>
-        </article>
+		<h1 class="nav-step">הובלה - מעבר דירה - אימות פרטים</h1>
+		<article id="details">
+			<p>סוג הובלה:</p>
+			<p>העברת דירה</p>
+		</article>
+		<article id="details">
+			<p>מיקום ההובלה:</p>
+			<p>אשקלון התפוז 15</p>
+			<p>בית פרטי</p>
+		</article>
+		<article id="details">
+			<p>יעד ההובלה:</p>
+			<p>רחובות דרך יבנה 17</p>
+			<p>בניין קומות קומה 5</p>
+		</article>
+		<article id="details">
+			<p>תאריך:</p>
+			<p>28/12/2016</p>
+		</article>
+      <article class="addedMenu">
+	<p class="addedMenuHead">סה"כ פריטים</p>
+	<ul>
+		<li>
+			<p class="item">קרטון גדול<span>x5</span></p>
+		     	<p class="description">שביר</p>
+		</li>
+		<li>
+			<p class="item">מכונת כביסה<span>x1</span></p>
+			<p class="description">שביר</p>
+		</li>
+		<li>
+			<p class="item">סלון גדול<span>x1</span></p>
+			<p class="description">3 חלקים סלון</p>
+		</li>
+		<li>
+			<p class="item">מקרר<span>x1</span></p>
+			<p class="description">עדין מאוד</p>
+		</li>
+		</ul>	
+		<p class="totalItems">סה"כ פריטים<span>8</span></p>
+		<form action="createNewTrunk_Step4.html">
+			<button>פרסום</button>
+		</form>
+	</article>
 	</section>
 
 	<aside id="calendar">
