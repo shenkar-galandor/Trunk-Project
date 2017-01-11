@@ -366,7 +366,7 @@ header section i {
 .nav-wizard > li > a {
   position: relative;
   background-color: #eeeeee;
-  padding: 10px 56px 10px 54.5px;
+  padding: 10px 56px 10px 54.4px;
   color: #000;
 }
 .nav-wizard > li:not(:first-child) > a {
