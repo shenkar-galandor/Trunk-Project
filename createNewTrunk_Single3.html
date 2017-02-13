@@ -73,22 +73,44 @@
 
 	<section>
 		<ul class="nav nav-wizard">
-		    <li class="active"><a href="#_">פרסום</a></li>
-		    <li><a href="createNewTrunk_Single3.html">אימות פרטים</a></li>
+		    <li><a href="#_">פרסום</a></li>
+		    <li class="active"><a href="#_">אימות פרטים</a></li>
 		    <li><a href="createNewTrunk_Single2.html">הוספת פריטים</a></li>
 		    <li><a href="createNewTrunk_Single1.html">פרטי הובלה</a></li>
 		    <li><a href="createNewTrunk.html">סוג הובלה</a></li>
 		</ul>
 
-		<h1 class="nav-step">הובלה - מעבר דירה - פירסום</h1>
-        <article>
-        	<div class="accept">
-        		<h5>הפריטים נקלטו בהצלחה!</h5>
-        		<h5>בעוד מספר שניות הובלתך תופיע בלוח ההובלות</h5>
-        		<img src="images/confirm.png"><br>
-        		<a href="myTrunks.html"><button>ההובלות שלי</button></a>
-        	</div>
-        </article>
+		<h1 class="nav-step">הובלה - פריט בודד - אימות פרטים</h1>
+		<div class="addToItemList">
+			<article id="details">
+				<p>סוג הובלה:</p>
+				<p>העברת דירה</p>
+			</article>
+			<article id="details">
+				<p>מיקום ההובלה:</p>
+				<p id="getTrunkLocation"></p>
+				<p id="getHouseType"></p>
+			</article>
+			<article id="details">
+				<p>יעד ההובלה:</p>
+				<p id="getTrunkDestination"></p>
+				<p id="getHouseTypeDest"></p>
+				<p id="getFloorDest"></p>
+			</article>
+			<article id="details">
+				<p>תאריך:</p>
+				<p id="getTrunkDate"></p>
+			</article>
+		</div>
+      <article class="addedMenuSingle">
+		<p class="addedMenuHead1">הפריט<br>המבוקש</p>
+			<ul id="SingleItem">
+			
+			</ul>
+			<form action="createNewTrunk_Single4.html">
+				<button id="publish">פרסום</button>
+			</form>
+		</article>
 	</section>
 
 	<aside id="calendar">
@@ -168,6 +190,6 @@
 		</section>
 	</div>
 </footer>
-</body>
 <div class="responsive"><p>Responsive Coming Soon!</p></div>
+</body>
 </html>

@@ -9,6 +9,7 @@
 	<!-- Jquery & Javascript link -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="includes/script.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKrQX4UXbUayCrOr_V25HYPdEJNSlPTyc&callback=initMap" async defer></script>
 	<!-- Adding Bootstrap CSS & JS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -21,11 +22,10 @@
 
 <header>
 	<div class="container">
-		<a href="#" id="logo">Trunk.co.il</a>
+		<a href="#" id="logo"></a>
 		<section>
 			<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-			<button id="dashboard">פאנל ניהול</button>
 			<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
 		</section>
@@ -82,38 +82,40 @@
 		</ul>
 
 		<h1 class="nav-step">הובלה - מעבר דירה</h1>
-        <article>
+        <article class="form1">
         	<form action="createNewTrunk_Step2.html">
               <div class="form-group">
-                <label for="exampleInputEmail1">מיקום ההובלה</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="מיקום הובלה">
+                <label for="trunkLocation">מיקום ההובלה</label>
+                <input type="text" class="form-control" id="trunkLocation" placeholder="מיקום הובלה">
               </div>
               <label class="radio-inline">
-              	בית קרקע<input type="radio" value="option1">
+              	בית קרקע<input type="radio" name="houseType" id="villa" value="בית קרקע" checked>
               </label>
               <label class="radio-inline">
-              	בניין קומות<input type="radio" value="option2" checked>
+              	בניין קומות<input type="radio" name="houseType" id="building" value="בית קומות">
               </label>
-              <label for="exampleInputPassword1">קומה</label>
-                <input type="text" class="form-control floor" id="" placeholder="קומה">
+              <label for="floor">קומה</label>
+                <input type="text" class="form-control floor" id="floor" placeholder="קומה">
               <div class="form-group">
-                <label for="exampleInputPassword1">יעד ההובלה</label>
-                <input type="text" class="form-control"  placeholder="יעד הובלה">
+                <label for="trunkDestination">יעד ההובלה</label>
+                <input type="text" class="form-control" id="trunkDestination" placeholder="יעד הובלה">
               </div>
               <label class="radio-inline">
-              	בית קרקע<input type="radio" name="" value="option1" checked>
+              	בית קרקע<input type="radio" name="houseTypeDest" id="villaDest" value="בית קרקע" checked>
               </label>
               <label class="radio-inline">
-              	בניין קומות<input type="radio" name="" value="option2">
+              	בניין קומות<input type="radio" name="houseTypeDest" id="buildingDest" value="בית קומות">
               </label>
-              <label for="exampleInputPassword1">קומה</label>
-                <input type="text" class="form-control floor" id="exampleInputPassword1" placeholder="קומה" disabled>
+              <label for="floorDest">קומה</label>
+                <input type="text" class="form-control floor" id="floorDest" placeholder="קומה" disabled>
               <div class="form-group">
-                <label for="exampleInputEmail1">תאריך</label>
-                <input type="date" class="form-control" id="exampleInputEmail1">
+                <label for="trunkDate">תאריך</label>
+                <input type="date" class="form-control" id="trunkDate">
               </div>
                 <br>
               <button class="nextStep">המשך</button>
+              <!-- Google API -->
+              <div id="map"></div>
             </form>
         </article>
 	</section>

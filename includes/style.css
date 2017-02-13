@@ -14,7 +14,11 @@ header {
 	height: 62px;
 }
 #logo {
+	position: absolute;
 	display: block;
+	background: url(../images/wtrunk.png);
+	height: 65px;
+	width: 96px;
 	color: #fff;
 	font-size: 26px;
 	text-decoration: none;
@@ -445,9 +449,10 @@ main h1 {
 	display: inline-block;
 }
 .nextStep {
-	position:absolute;
-	bottom: 20px;
-	left: 20px;
+	position: relative;
+    right: 40px;
+    bottom: 20px;
+    float: left;
 	width: 200px;
 	height: 50px;
 	background: #033076;
@@ -497,8 +502,6 @@ article form input[type=search]{
 	text-align: center;
 	margin-top: 10px;
 }
-
-
 .addToItemList {
 	float: right;
 }
@@ -520,6 +523,16 @@ article form input[type=search]{
 	font-weight: bold;
 	padding-top: 5px;
 }
+.addedMenuHead1 {
+	background: #033076;
+	height: 150px;
+	width: 196px;
+	color:#ffffff;
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 30px;
+}
 
 #wizard .addedMenu{
 	padding-left: 0px;
@@ -539,7 +552,46 @@ article form input[type=search]{
 	border-bottom: 1px solid #aaaaaa;
 	width: 100%;
 }
+.addedMenuSingle{
+	float: left;
+	height: auto;
+	width: 198px;
+	background: #ffffff;
+	border:1px solid #c0c0c0;
+}
 
+.addedMenuSingle ul{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+.addedMenuSingle li{
+	font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+    width: 100%;
+}
+.addedMenuSingle .item {
+	position: relative;
+    top: 50px;
+    right: 10px;
+}
+.addedMenuSingle .desc {
+	position: relative;
+    top: 50px;
+    right: 10px;
+}
+.addedMenuSingle .amount {
+	position: relative;
+    bottom: 50px;
+    background: url(../images/times.png) 2px 15px no-repeat;
+    padding-left: 15px;
+}
+.addedMenuSingle button {
+	width: 197px;
+}
 .addedMenu span:not(.totalItems_amount) {
     background: url(../images/times.png) 14px 10px no-repeat;
     font-size: 22px;
@@ -575,7 +627,7 @@ article form input[type=search]{
 	right:10px;
 	top:70px;
 }
-.totalItems_amount {
+.totalItems_amount, .totalItems_amount1 {
     position: relative;
     top: 35px;
     right: 163px;
@@ -598,7 +650,6 @@ article form input[type=search]{
 	bottom: 0px;
 
 }
-
 #details p{
 	font-weight: bold;
 	margin:0 0 0 0;
@@ -681,7 +732,7 @@ article form input[type=search]{
 .responsive {
 	display: none;
 }
-#update {
+#update, #updateSingle {
 	position: absolute;
 	background: #fff;
 	width: 510px;
@@ -689,20 +740,49 @@ article form input[type=search]{
 	z-index: 99;
 	cursor: pointer;
 }
-#update p {
+#update p, #updateSingle p {
 	margin: 0;
 }
-#update li{
+#update li, #updateSingle li{
 	list-style-type: none;
 	padding-right: 20px;
 	border-bottom: 0.5px solid #F5F5F5;
 }
-#update li:hover{
+#update li:hover, #updateSingle li:hover{
 	background: #F5F5F5;
 }
-#update li:last-child{
+#update li:last-child, #updateSingle li:last-child{
 	border-bottom: none;
 }
 .desc {
 	font-size: 10px;
+}
+
+.choose {
+	text-align: center;
+	margin-top: 50px;
+    margin-right: 100px;
+}
+.choose a, .choose a:visited {
+	color: #021f54;
+	font-size: 26px;
+	text-decoration: none;
+	font-weight: bold;
+	float: right;
+}
+.choose a:nth-child(2) {
+	margin-right: 100px;
+}
+.form1 {
+	position: relative;
+}
+#map {
+	position: absolute;
+	top: 20px;
+	left: 0;
+    height: 300px;
+    width: 390px;
+}
+.accept img {
+	margin: 20px 0 20px 0;
 }

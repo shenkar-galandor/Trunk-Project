@@ -6,9 +6,6 @@
 	<meta name="author" content="Gal Amitai, Or Adar">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Trunk - LIVE Trunking Finder</title>
-	<!-- Jquery & Javascript link -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="includes/script.js"></script>
 	<!-- Adding Bootstrap CSS & JS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -73,24 +70,52 @@
 
 	<section>
 		<ul class="nav nav-wizard">
-		    <li class="active"><a href="#_">פרסום</a></li>
-		    <li><a href="createNewTrunk_Single3.html">אימות פרטים</a></li>
-		    <li><a href="createNewTrunk_Single2.html">הוספת פריטים</a></li>
+		    <li><a href="#_">פרסום</a></li>
+		    <li><a href="#_">אימות פרטים</a></li>
+		    <li class="active"><a href="#_">הוספת פריטים</a></li>
 		    <li><a href="createNewTrunk_Single1.html">פרטי הובלה</a></li>
 		    <li><a href="createNewTrunk.html">סוג הובלה</a></li>
 		</ul>
 
-		<h1 class="nav-step">הובלה - מעבר דירה - פירסום</h1>
-        <article>
-        	<div class="accept">
-        		<h5>הפריטים נקלטו בהצלחה!</h5>
-        		<h5>בעוד מספר שניות הובלתך תופיע בלוח ההובלות</h5>
-        		<img src="images/confirm.png"><br>
-        		<a href="myTrunks.html"><button>ההובלות שלי</button></a>
-        	</div>
-        </article>
+		<h1 class="nav-step">הובלה - פריט בודד - הוספת פריט</h1>
+		<div class="addToItemList">
+			<article class="form-group form-group-lg">
+			        	<h2>הוספת פריטים</h2>
+			        	<form method="">
+							<div id="searcharea">
+			        			<input class="form-control" type="search" id="bigSearch" autocomplete="off" placeholder="חיפוש מהיר">
+			        		</div>
+			        		<div id="updateSingle"></div>
+			        	</form>
+			</article>
+			<article class="form-group form-group-sm">
+			    <h2>הוספת פריט</h2>
+			    <form class="form-horizontal itemForm" action="#_" onsubmit="return addSingleItem();">
+				   	<label>שם פריט:<input class="form-control" type="text" id="productName" placeholder="" required></label>
+				   	<label >הערות:<input class="form-control" type="text" id="productDesc" placeholder=""></label>
+				   	<label>גודל:
+					<select class="form-control" type="text">
+				  		 <option>קטן</option>
+				  		 <option>בינוני</option>
+				 		 <option>גדול</option>
+				  		 <option>גדול מאוד</option>
+					</select>
+					</label>
+					<label>שביר<input type="checkbox"></label>
+				        	<button type="submit">הוסף פריט</button>
+			        	</form>
+			</article>
+		</div>
+			<article class="addedMenuSingle">
+				<p class="addedMenuHead1">הפריט<br>המבוקש</p>
+				<ul id="itemList">
+				<!-- Item list from json file -->
+				</ul>
+				<form action="createNewTrunk_Single3.html">
+					<button id="sendSingleData">המשך</button>
+				</form>
+			</article>
 	</section>
-
 	<aside id="calendar">
 		<div class="month">      
 		  <ul>
@@ -168,6 +193,9 @@
 		</section>
 	</div>
 </footer>
-</body>
 <div class="responsive"><p>Responsive Coming Soon!</p></div>
+	<!-- Jquery & Javascript link -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="includes/script.js"></script>
+</body>
 </html>

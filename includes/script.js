@@ -1,30 +1,74 @@
-$('#bigSearch').keyup(function() {
+$("document").ready(function() {
+	$('#bigSearch').keyup(function() {
 	var searchField = $('#bigSearch').val();
 	if(searchField != "") {
 		var myExp = new RegExp("^" + searchField, 'i');
 		$.getJSON('includes/data.json', function(data) {
 			var output = "<ul class='searchResult'>";
 			$.each(data, function(key, val) {
-				// if (key > 5) {
-		  //              return false;
-		  //       }
 				if(val.product.search(myExp) != -1) {
 					output += '<li>';
 					output += '<p class=item>' + val.product + '</p>';
 					output += '<p class=desc>' + val.desc + '</p>';
-					output += '</li>';
+					output += '</li>';	
 				}
+				});
+				output += '</ul>';
+				$('#update , #updateSingle').html(output);
 			});
-			output += '</ul>';
-			$('#update').html(output);
-		});
-	}
-	else
-		$('#update').html("");
-});
+		}
+		else
+			$('#update , #updateSingle').html("");
+	});
+	$(".nextStep").click(function() {
+		localStorage.setItem("trunkLocation", $("#trunkLocation").val());
+		if(document.getElementById("villa").checked) {
+			localStorage.setItem("houseType", "בית פרטי");
+		}
+		else {
+			localStorage.setItem("houseType", "בניין קומות");
+			localStorage.setItem("floor", $("#floor").val());
+		}
+		localStorage.setItem("trunkDestination", $("#trunkDestination").val());
+		if(document.getElementById("villaDest").checked) {
+			localStorage.setItem("houseTypeDest", "בית פרטי");
+		}
+		else {
+			localStorage.setItem("houseTypeDest", "בניין קומות");
+			localStorage.setItem("floor", $("#floorDest").val());
+		}
+		localStorage.setItem("trunkDate", $("#trunkDate").val());
+	});
+	$("#sendData").click(function() {
+		localStorage.setItem("itemsList", $("#itemList").html());
+		localStorage.setItem("itemsListAmount", $(".totalItems_amount").html());
+	});
+	$("#sendSingleData").click(function() {
+		localStorage.setItem("setItem", $("#itemList").html());
+	});
 
-$("document").ready(function() {
-	var searchItem, isAdded, num, totalItems_amount, curr;
+	$("#publish").click(function() {
+		localStorage.clear();
+	});
+
+	if(window.location.href.indexOf("Step3") > -1 || window.location.href.indexOf("Single3") > -1) {
+		$("#getItems").append(localStorage.getItem("itemsList"));
+		$(".totalItems_amount1").append(localStorage.getItem("itemsListAmount"));
+		$("#SingleItem").append(localStorage.getItem("setItem"));
+		$("#getTrunkLocation").append(localStorage.getItem("trunkLocation"));
+		$("#getHouseType").append(localStorage.getItem("houseType"));
+		$("#getTrunkDestination").append(localStorage.getItem("trunkDestination"));
+		$("#getHouseTypeDest").append(localStorage.getItem("houseTypeDest"));
+		$("#getFloorDest").append(localStorage.getItem("floorDest"));
+		$("#getTrunkDate").append(localStorage.getItem("trunkDate"));
+
+    }
+
+
+	// counter
+	
+	// Search form for Apartment
+	var searchItem, isAdded, num, totalItems_amount, curr, map;
 	$("#update").on('click','li', function() {
 		isAdded = false;
 		searchItem = $(this).text();
@@ -38,14 +82,20 @@ $("document").ready(function() {
 		document.getElementById("bigSearch").value = "";
 		$('#update').html("");
 	});
+	// Search form for single item
+	$("#updateSingle").on('click','li', function() {
+		searchItem = $(this).text();
+		$("#itemList").html("<li>" + $(this).html() + "<span class='amount'>1</span></li>");
+		// reset input
+		document.getElementById("bigSearch").value = "";
+		$('#updateSingle').html("");
+	});
 	function isAdd() {
 		curr = 0;
 		for(i=1; i <= $("#itemList li").length ; i++) {
-			++curr;
 			if($("#itemList li:nth-child("+i+")").is(":contains("+searchItem+")")) {
 				curr  = i;
 				num = parseInt($.trim($("#itemList li:nth-child("+(curr)+") .amount").html()));
-				console.log(num);
 				$("#itemList li:nth-child("+curr+") .amount").html(++num);
 				isAdded = true;
 				return true;
@@ -53,12 +103,27 @@ $("document").ready(function() {
 		}
 	};
 });
-function galaa() {
+// Sidebar Items
+function addItem() {
 	var item = "<p class=item>" + document.getElementById('productName').value; + "</p>";
 	item += "<p class=desc>" + document.getElementById('productDesc').value + "</p>";
 	// reset form inputs
 	document.getElementById('productName').value = "";
 	document.getElementById('productDesc').value = "";
-	console.log(item);
 	$("#itemList").append("<li>" + item + "<span class='amount'>1</span></li>");
+}
+function addSingleItem() {
+	var item = "<p class=item>" + document.getElementById('productName').value; + "</p>";
+	item += "<p class=desc>" + document.getElementById('productDesc').value + "</p>";
+	// reset form inputs
+	document.getElementById('productName').value = "";
+	document.getElementById('productDesc').value = "";
+	$("#itemList").html("<li>" + item + "<span class='amount'>1</span></li>");
+}
+// Google map API
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+    	center: {lat: 31.513903, lng: 35.286833},
+	    zoom: 5
+    });
 }
