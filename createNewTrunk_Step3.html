@@ -21,11 +21,10 @@
 
 <header>
 	<div class="container">
-		<a href="#" id="logo">Trunk.co.il</a>
+		<a href="#" id="logo"></a>
 		<section>
 			<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-			<button id="dashboard">פאנל ניהול</button>
 			<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
 		</section>
@@ -89,42 +88,29 @@
 			</article>
 			<article id="details">
 				<p>מיקום ההובלה:</p>
-				<p>אשקלון התפוז 15</p>
-				<p>בית פרטי</p>
+				<p id="getTrunkLocation"></p>
+				<p id="getHouseType"></p>
 			</article>
 			<article id="details">
 				<p>יעד ההובלה:</p>
-				<p>רחובות דרך יבנה 17</p>
-				<p>בניין קומות קומה 5</p>
+				<p id="getTrunkDestination"></p>
+				<p id="getHouseTypeDest"></p>
+				<p id="getFloorDest"></p>
 			</article>
 			<article id="details">
 				<p>תאריך:</p>
-				<p>28/12/2016</p>
+				<p id="getTrunkDate"></p>
 			</article>
 		</div>
       <article class="addedMenu">
 		<p class="addedMenuHead">סה"כ פריטים</p>
-		<ul>
-			<li>
-				<p class="item">קרטון גדול<span>x5</span></p>
-			     	<p class="description">שביר</p>
-			</li>
-			<li>
-				<p class="item">מכונת כביסה<span>x1</span></p>
-				<p class="description">שביר</p>
-			</li>
-			<li>
-				<p class="item">סלון גדול<span>x1</span></p>
-				<p class="description">3 חלקים סלון</p>
-			</li>
-			<li>
-				<p class="item">מקרר<span>x1</span></p>
-				<p class="description">עדין מאוד</p>
-			</li>
+			<ul id="getItems">
+			
 			</ul>	
-			<p class="totalItems">סה"כ פריטים<span>8</span></p>
+			<p class="totalItems">סה"כ פריטים</p>
+			<div class="totalItems_amount1"></div>
 			<form action="createNewTrunk_Step4.html">
-				<button>פרסום</button>
+				<button id="publish">פרסום</button>
 			</form>
 		</article>
 	</section>
