@@ -19,14 +19,23 @@
 </head>
 <body id="panel">
 
+<div id="mySidenav" class="sidenav">
+	<a href="#_" class="closebtn">&times;</a>
+	<i class="fa fa-user" id="sideNavUser" aria-hidden="true"></i>
+	<a href="createNewTrunk.html">תיאום הובלה חדשה</a>
+	<a href="MyTrunks.html">ההובלות שלי</a>
+	<a href="#_">הודעות ועדכונים</a>
+	<a href="#_">הפרופיל שלי</a>
+</div>
 <header>
 	<div class="container">
+		<a href="#_" id="openSideNav"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		<a href="#" id="logo"></a>
 		<section>
-			<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-comment hideMe" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-user hideMe" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-sort-desc hideMe" aria-hidden="true"></i></a>
 		</section>
 	</div>
 </header>
@@ -54,17 +63,17 @@
 
 <!-- Breadcrumbs -->
 <div class="container">
-	<ul id="breadcrumbs">
+	<ul id="breadcrumbs" class="hideMe">
 		<li><a href="index.html">עמוד הבית <i class="fa fa-home" aria-hidden="true"></i></a></li>
 		<li><a href="dashboard.html">איזור אישי</a></li>
 		<li>תיאום הובלה חדשה</li>
 	</ul>
 <!-- End Breadcrumbs -->
 <main id="wizard">
-	<nav>
+	<nav class="hideMe">
 		<ul>
 			<li>איזור אישי</li>
-			<li><a href="createNewTrunk.html">> תיאום הובלה חדשה</a></li>
+			<li><a href="createNewTrunk.html">תיאום הובלה חדשה <</a></li>
 			<li><a href="myTrunks.html">ההובלות שלי</a></li>
 			<li><a href="#">הודעות ועדכונים</a></li>
 			<li><a href="#">הפרופיל שלי</a></li>
@@ -72,7 +81,7 @@
 	</nav>
 
 	<section>
-		<ul class="nav nav-wizard">
+		<ul class="nav nav-wizard hideMe">
 		    <li class="active"><a href="#_">פרסום</a></li>
 		    <li><a href="createNewTrunk_Single3.html">אימות פרטים</a></li>
 		    <li><a href="createNewTrunk_Single2.html">הוספת פריטים</a></li>
@@ -91,7 +100,7 @@
         </article>
 	</section>
 
-	<aside id="calendar">
+	<aside id="calendar" class="hideMe">
 		<div class="month">      
 		  <ul>
 		    <li class="prev">❮</li>
@@ -157,7 +166,7 @@
 			<p><i class="fa fa-envelope-o" aria-hidden="true"></i> Email: trunk@gmail.com</p>
 			<p><i class="fa fa-copyright" aria-hidden="true"></i> All right received - Trunk.co.il - 2016</p>
 		</section>
-		<section>
+		<section class="hideMe">
 			<h5>ניווט מהיר</h5>
 			<ul>
 				<li><a href="#">דף ראשי</a></li>
@@ -169,5 +178,4 @@
 	</div>
 </footer>
 </body>
-<div class="responsive"><p>Responsive Coming Soon!</p></div>
 </html>

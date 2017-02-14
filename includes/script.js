@@ -1,4 +1,12 @@
 $("document").ready(function() {
+	//open the side nav
+	$("#openSideNav").click(function () {
+        document.getElementById("mySidenav").style.width = "250px";
+    });
+	$(".closebtn").click(function () {
+        document.getElementById("mySidenav").style.width = "0";
+    })
+	//add items to list
 	$('#bigSearch').keyup(function() {
 	var searchField = $('#bigSearch').val();
 	if(searchField != "") {
@@ -35,7 +43,7 @@ $("document").ready(function() {
 		}
 		else {
 			localStorage.setItem("houseTypeDest", "בניין קומות");
-			localStorage.setItem("floor", $("#floorDest").val());
+			localStorage.setItem("floorDest", $("#floorDest").val());
 		}
 		localStorage.setItem("trunkDate", $("#trunkDate").val());
 	});
@@ -59,6 +67,7 @@ $("document").ready(function() {
 		$("#getHouseType").append(localStorage.getItem("houseType"));
 		$("#getTrunkDestination").append(localStorage.getItem("trunkDestination"));
 		$("#getHouseTypeDest").append(localStorage.getItem("houseTypeDest"));
+        $("#getFloor").append(localStorage.getItem("floor"));
 		$("#getFloorDest").append(localStorage.getItem("floorDest"));
 		$("#getTrunkDate").append(localStorage.getItem("trunkDate"));
 
@@ -111,6 +120,8 @@ function addItem() {
 	document.getElementById('productName').value = "";
 	document.getElementById('productDesc').value = "";
 	$("#itemList").append("<li>" + item + "<span class='amount'>1</span></li>");
+    num = parseInt($.trim($(".totalItems_amount").html()));
+    $(".totalItems_amount").text(++num);
 }
 function addSingleItem() {
 	var item = "<p class=item>" + document.getElementById('productName').value; + "</p>";
