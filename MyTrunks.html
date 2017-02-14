@@ -18,15 +18,23 @@
 	<link rel="stylesheet" href="includes/style.css">
 </head>
 <body id="panel">
-
+<div id="mySidenav" class="sidenav">
+	<a href="#_" class="closebtn">&times;</a>
+	<i class="fa fa-user" id="sideNavUser" aria-hidden="true"></i>
+	<a href="createNewTrunk.html">תיאום הובלה חדשה</a>
+	<a href="MyTrunks.html">ההובלות שלי</a>
+	<a href="#_">הודעות ועדכונים</a>
+	<a href="#_">הפרופיל שלי</a>
+</div>
 <header>
 	<div class="container">
+		<a href="#_" id="openSideNav"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		<a href="#" id="logo"></a>
 		<section>
-			<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-comment hideMe" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-user hideMe" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-sort-desc hideMe" aria-hidden="true"></i></a>
 		</section>
 	</div>
 </header>
@@ -54,14 +62,14 @@
 
 <!-- Breadcrumbs -->
 <div class="container">
-	<ul id="breadcrumbs">
+	<ul id="breadcrumbs" class="hideMe">
 		<li><a href="index.html">עמוד הבית <i class="fa fa-home" aria-hidden="true"></i></a></li>
 		<li><a href="#">איזור אישי</a></li>
 		<li>ההובלות שלי</li>
 	</ul>
 <!-- End Breadcrumbs -->
 <main>
-	<nav>
+	<nav class="hideMe">
 		<ul>
 			<li>איזור אישי</li>
 			<li><a href="createNewTrunk.html">תיאום הובלה חדשה</a></li>
@@ -76,7 +84,7 @@
     	<table class="table table-bordered myTrunkTable">
 	    <thead>
 	      <tr>
-	        <th>מספר הובלה</th>
+	        <th class="hideMe">מספר הובלה</th>
 	        <th>סוג הובלה</th>
 	        <th>מיקום</th>
 	        <th>יעד</th>
@@ -87,21 +95,21 @@
 	    </thead>
 	    <tbody>
 	      <tr>
-	        <td>165487</td>
+	        <td class="hideMe">165487</td>
 	        <td>מעבר דירה</td>
 	        <td>התפוז 15 אשקלון</td>
 	        <td>דרך יבנה 17 רחובות</td>
 	        <td>25/08/16</td>
-	        <td class="text-center"><button type="button" id="#myModal" data-toggle="modal" data-target="#myModal">בחר הצעה <span>1</span></button></td>
+	        <td class="text-center"><button type="button" id="#myModal" data-toggle="modal" data-target="#myModal">בחר<br>הצעה<span>1</span></button></td>
 	        <td class="awating">ממתין לאישור</td>
 	      </tr>
 	      <tr>
-	        <td>362487</td>
+	        <td class="hideMe">362487</td>
 	        <td>פריט בודד</td>
 	        <td>המורן 5 רחובות</td>
 	        <td>שנקין 5 תל-אביב</td>
 	        <td>21/08/16</td>
-	        <td class="text-center"><button>בחר הצעה</button></td>
+	        <td class="text-center"><button>בחר<br>הצעה</button></td>
 	        <td class="approved">מאושר</td>
 	      </tr>
 	      
@@ -162,7 +170,7 @@
 
 	</section>
 
-	<aside id="calendar">
+	<aside id="calendar" class="hideMe">
 		<div class="month">      
 		  <ul>
 		    <li class="prev">❮</li>
@@ -228,7 +236,7 @@
 			<p><i class="fa fa-envelope-o" aria-hidden="true"></i> Email: trunk@gmail.com</p>
 			<p><i class="fa fa-copyright" aria-hidden="true"></i> All right received - Trunk.co.il - 2016</p>
 		</section>
-		<section>
+		<section class="hideMe">
 			<h5>ניווט מהיר</h5>
 			<ul>
 				<li><a href="#">דף ראשי</a></li>
@@ -240,5 +248,4 @@
 	</div>
 </footer>
 </body>
-<div class="responsive"><p>Responsive Coming Soon!</p></div>
 </html>

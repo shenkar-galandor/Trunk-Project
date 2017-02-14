@@ -786,3 +786,157 @@ article form input[type=search]{
 .accept img {
 	margin: 20px 0 20px 0;
 }
+#openSideNav{
+	display: none;
+}
+/*---Media Queries---*/
+
+
+@media screen and (max-width: 415px ) {
+	.hideMe{
+		display: none;
+	}
+	#logo{
+		margin-left: 60px;
+	}
+	header section{
+		padding-right: 15px;
+	}
+	aside{
+		height: 100%;
+	}
+	.container{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	aside section{
+		margin:0 auto;
+		width: 47%;
+		height: 45px;
+		margin-top: 10px;
+	}
+	.counter{
+		font-size: 18px;
+	}
+	aside h5{
+		font-size: 12px;
+	}
+	#homepage article:nth-child(1) section:nth-child(1) {
+		height: 100%;
+		background:#ffffff;
+	}
+	#homepage article:nth-child(1) section:nth-child(2) {
+		height: 100%;
+		background: #021f54;
+	}
+	#homepage article section {
+		width: 100%;
+		padding: 15px 0 15px 0;
+	}
+	#homepage article:nth-child(2) div {
+		bottom: 0px;
+	}
+	footer, #homepage article:nth-child(2){
+		clear: both;
+	}
+	footer section:nth-child(1){
+		width: 100%;
+		padding-left: 30px;
+	}
+
+	#panel aside h4{
+		font-size: 22px;
+	}
+	#panel aside section {
+		padding-bottom: 10px;
+		height: 65px;
+		width: 47%;
+		margin-left: 2%;
+	}
+	#panel main section {
+		min-height: 100%;
+		width: 100%;
+		padding-bottom: 15px;
+	}
+	.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		padding-top: 60px;
+		transition: 0.5s;
+		text-align: right;
+	}
+	.sidenav a {
+		padding: 8px 20px 8px 32px;
+		text-decoration: none;
+		font-size: 16px;
+		color: #ffffff;
+		display: block;
+		border-top: 0.25px solid #aaaaaa;
+		transition: 0.3s
+	}
+	.sidenav a:hover, .offcanvas a:focus{
+		color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+	#main {
+		transition: margin-left .5s;
+		padding: 20px;
+	}
+
+	#openSideNav{
+		display: block;
+		color: #ffffff;
+		font-size: 40px;
+		margin-left: 15px;
+		float: left;
+	}
+
+	#sideNavUser{
+		color:#ffffff;
+		text-align: center;
+		font-size: 100px;
+		position: relative;
+		right: 34%;
+		margin-bottom: 20px
+	}
+
+	.choose a:nth-child(2) {
+		margin-right: 0px;
+	}
+
+	.choose a, .choose a:visited {
+		display: block;
+		float: none;
+		text-align: center;
+	}
+	#trunkLocation,#trunkDestination,#trunkDate{
+		width: 80%;
+	}
+	#wizard .radio-inline {
+		padding: 0px 0px 0px 20px;
+	}
+	.nav-step{
+		font-size: 26px;
+	}
+	.accept{
+		margin-top: 0;
+	}
+	.accept h5{
+		font-size: 22px;
+	}
+
+
+}

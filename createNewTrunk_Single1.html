@@ -9,6 +9,7 @@
 	<!-- Jquery & Javascript link -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="includes/script.js"></script>
+	<script src="includes/valid.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKrQX4UXbUayCrOr_V25HYPdEJNSlPTyc&callback=initMap" async defer></script>
 	<!-- Adding Bootstrap CSS & JS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -20,14 +21,23 @@
 </head>
 <body id="panel">
 
+<div id="mySidenav" class="sidenav">
+	<a href="#_" class="closebtn">&times;</a>
+	<i class="fa fa-user" id="sideNavUser" aria-hidden="true"></i>
+	<a href="createNewTrunk.html">תיאום הובלה חדשה <</a>
+	<a href="MyTrunks.html">ההובלות שלי</a>
+	<a href="#_">הודעות ועדכונים</a>
+	<a href="#_">הפרופיל שלי</a>
+</div>
 <header>
 	<div class="container">
+		<a href="#_" id="openSideNav"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		<a href="#" id="logo"></a>
 		<section>
-			<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-comment hideMe" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-user hideMe" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-sort-desc hideMe" aria-hidden="true"></i></a>
 		</section>
 	</div>
 </header>
@@ -55,14 +65,14 @@
 
 <!-- Breadcrumbs -->
 <div class="container">
-	<ul id="breadcrumbs">
+	<ul id="breadcrumbs" class="hideMe"class="hideMe">
 		<li><a href="index.html">עמוד הבית <i class="fa fa-home" aria-hidden="true"></i></a></li>
 		<li><a href="dashboard.html">איזור אישי</a></li>
 		<li>תיאום הובלה חדשה</li>
 	</ul>
 <!-- End Breadcrumbs -->
 <main id="wizard">
-	<nav>
+	<nav class="hideMe">
 		<ul>
 			<li>איזור אישי</li>
 			<li><a href="createNewTrunk.html">> תיאום הובלה חדשה</a></li>
@@ -73,7 +83,7 @@
 	</nav>
 
 	<section>
-		<ul class="nav nav-wizard">
+		<ul class="nav nav-wizard hideMe">
 		    <li><a href="#_">פרסום</a></li>
 		    <li><a href="#_">אימות פרטים</a></li>
 		    <li><a href="#_">הוספת פריטים</a></li>
@@ -84,43 +94,43 @@
 		<h1 class="nav-step">פרטי הובלה - פריט בודד</h1>
         <article class="form1">
         	<form action="createNewTrunk_Single2.html">
-              <div class="form-group">
-                <label for="trunkLocation">מיקום ההובלה</label>
-                <input type="text" class="form-control" id="trunkLocation" placeholder="מיקום הובלה">
-              </div>
-              <label class="radio-inline">
-              	בית קרקע<input type="radio" name="houseType" id="villa" value="בית קרקע" checked>
-              </label>
-              <label class="radio-inline">
-              	בניין קומות<input type="radio" name="houseType" id="building" value="בית קומות">
-              </label>
-              <label for="floor">קומה</label>
-                <input type="text" class="form-control floor" id="floor" placeholder="קומה">
-              <div class="form-group">
-                <label for="trunkDestination">יעד ההובלה</label>
-                <input type="text" class="form-control" id="trunkDestination" placeholder="יעד הובלה">
-              </div>
-              <label class="radio-inline">
-              	בית קרקע<input type="radio" name="houseTypeDest" id="villaDest" value="בית קרקע" checked>
-              </label>
-              <label class="radio-inline">
-              	בניין קומות<input type="radio" name="houseTypeDest" id="buildingDest" value="בית קומות">
-              </label>
-              <label for="floorDest">קומה</label>
-                <input type="text" class="form-control floor" id="floorDest" placeholder="קומה" disabled>
-              <div class="form-group">
-                <label for="trunkDate">תאריך</label>
-                <input type="date" class="form-control" id="trunkDate">
-              </div>
+				<div class="form-group">
+					<label for="trunkLocation">מיקום ההובלה</label>
+					<input type="text" class="form-control" id="trunkLocation" placeholder="מיקום הובלה" required>
+				</div>
+				<label class="radio-inline">
+					בית קרקע<input type="radio" name="houseType" id="villa" value="בית קרקע" checked>
+				</label>
+				<label class="radio-inline">
+					בניין קומות<input type="radio" name="houseType" id="building" value="בית קומות">
+				</label>
+				<label for="floor">קומה</label>
+				<input type="text" class="form-control floor" id="floor" placeholder="קומה" required disabled>
+				<div class="form-group">
+					<label for="trunkDestination">יעד ההובלה</label>
+					<input type="text" class="form-control" id="trunkDestination" placeholder="יעד הובלה" required>
+				</div>
+				<label class="radio-inline">
+					בית קרקע<input type="radio" name="houseTypeDest" id="villaDest" value="בית קרקע" checked>
+				</label>
+				<label class="radio-inline">
+					בניין קומות<input type="radio" name="houseTypeDest" id="buildingDest" value="בית קומות">
+				</label>
+				<label for="floorDest">קומה</label>
+				<input type="text" class="form-control floor" id="floorDest" placeholder="קומה" required disabled>
+				<div class="form-group">
+					<label for="trunkDate">תאריך</label>
+					<input type="date" class="form-control" id="trunkDate" required>
+				</div>
                 <br>
               <button class="nextStep">המשך</button>
               <!-- Google API -->
-              <div id="map"></div>
+              <div id="map" class="hideMe"></div>
             </form>
         </article>
 	</section>
 
-	<aside id="calendar">
+	<aside id="calendar" class="hideMe">
 		<div class="month">      
 		  <ul>
 		    <li class="prev">❮</li>
@@ -186,7 +196,7 @@
 			<p><i class="fa fa-envelope-o" aria-hidden="true"></i> Email: trunk@gmail.com</p>
 			<p><i class="fa fa-copyright" aria-hidden="true"></i> All right received - Trunk.co.il - 2016</p>
 		</section>
-		<section>
+		<section class="hideMe">
 			<h5>ניווט מהיר</h5>
 			<ul>
 				<li><a href="#">דף ראשי</a></li>
@@ -197,6 +207,5 @@
 		</section>
 	</div>
 </footer>
-<div class="responsive"><p>Responsive Coming Soon!</p></div>
 </body>
 </html>
