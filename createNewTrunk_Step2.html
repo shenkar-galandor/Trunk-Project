@@ -18,11 +18,10 @@
 
 <header>
 	<div class="container">
-		<a href="#" id="logo">Trunk.co.il</a>
+		<a href="#" id="logo"></a>
 		<section>
 			<a href="#"><i class="fa fa-comment" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-			<button id="dashboard">פאנל ניהול</button>
 			<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
 		</section>
@@ -82,7 +81,7 @@
 		<div class="addToItemList">
 			<article class="form-group form-group-lg">
 			        	<h2>הוספת פריטים</h2>
-			        	<form>
+			        	<form method="">
 							<div id="searcharea">
 			        			<input class="form-control" type="search" id="bigSearch" autocomplete="off" placeholder="חיפוש מהיר">
 			        		</div>
@@ -91,7 +90,7 @@
 			</article>
 			<article class="form-group form-group-sm">
 			    <h2>הוספת פריט</h2>
-			    <form class="form-horizontal itemForm" action="#_" onsubmit="return galaa();">
+			    <form class="form-horizontal itemForm" action="#_" onsubmit="return addItem();">
 				   	<label>שם פריט:<input class="form-control" type="text" id="productName" placeholder="" required></label>
 				   	<label >הערות:<input class="form-control" type="text" id="productDesc" placeholder=""></label>
 				   	<label>גודל:
@@ -115,7 +114,7 @@
 				<p class="totalItems">סה"כ פריטים</p>
 				<span class="totalItems_amount">0</span>
 				<form action="createNewTrunk_Step3.html">
-					<button>המשך</button>
+					<button id="sendData">המשך</button>
 				</form>
 			</article>
 	</section>
