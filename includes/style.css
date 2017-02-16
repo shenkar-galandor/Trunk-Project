@@ -789,6 +789,18 @@ article form input[type=search]{
 #openSideNav{
 	display: none;
 }
+.sidenav {
+	display: none;
+}
+#respAddItem {
+	display: none;
+}
+.goResp {
+	display: none;
+}
+.myTrunkTable p {
+    	display: inline-block;
+}
 /*---Media Queries---*/
 
 
@@ -870,6 +882,7 @@ article form input[type=search]{
 		padding-top: 60px;
 		transition: 0.5s;
 		text-align: right;
+		display: block;
 	}
 	.sidenav a {
 		padding: 8px 20px 8px 32px;
@@ -912,7 +925,9 @@ article form input[type=search]{
 		right: 34%;
 		margin-bottom: 20px
 	}
-
+	.choose {
+		margin-right: 0px;
+	}
 	.choose a:nth-child(2) {
 		margin-right: 0px;
 	}
@@ -937,6 +952,64 @@ article form input[type=search]{
 	.accept h5{
 		font-size: 22px;
 	}
-
-
+	article form input[type=search] {
+    	width: 100%;
+	}
+	#respAddItem {
+		display: block;
+		background: #033076;
+		color: #fff;
+		font-weight: bold;
+    	padding: 13px;
+    	font-size: 18px;
+    	height: 50px;
+	}
+	#respAddItem p {
+		float: right;
+	}
+	#respShowItems {
+		float: left;
+		background: #5cb85c;
+		padding: 2px 10px 2px 10px;
+		border-radius: 5px;
+		color: #fff;
+	}
+	#respShowItems, #respShowItems:visited, #respShowItems:focus {
+		color: #fff;
+	}
+	.modal-dialog {
+		width: 80%;
+	}
+	.modal-xs h3 {
+		text-align: center;
+		font-weight: bold;
+	}
+	#update {
+		width: 80%;
+	}
+	.addedMenu {
+		width: 100%;
+	}
+	#itemList .item {
+		font-size: 22px;
+	}
+	#itemList .desc {
+		font-size: 15px;
+	}
+	#wizard .form-group {
+		width: 100%;
+	}
+	.goResp {
+		display: block;
+		width: 100%;
+	}
+	.addToItemList {
+		width: 110%;
+	}
+	.myTrunkTable button {
+    	width: 25px;
+    }
+    .myTrunkTable p {
+    	display: none;
+    }
 }

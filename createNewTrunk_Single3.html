@@ -30,7 +30,7 @@
 <header>
 	<div class="container">
 		<a href="#_" id="openSideNav"><i class="fa fa-bars" aria-hidden="true"></i></a>
-		<a href="#" id="logo"></a>
+		<a href="index.html" id="logo"></a>
 		<section>
 			<a href="#"><i class="fa fa-comment hideMe" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
@@ -80,6 +80,21 @@
 		</ul>
 	</nav>
 
+	<div id="respAddItem">
+		<p>לחץ כאן לצפייה בפריט המבוקש</p>
+		<a href="#_" id="respShowItems" data-toggle="modal" data-target=".bd-example-modal-xs">לחץ לצפייה</a>
+	</div>
+	<!-- Small modal -->
+	<div class="modal fade bd-example-modal-xs" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-xs">
+	    <div class="modal-content addedMenu">
+	    	<h3>רשימת פרטים</h3>
+	    	<ul id="getItems">
+			
+			</ul>
+	    </div>
+	  </div>
+	</div>
 	<section>
 		<ul class="nav nav-wizard hideMe">
 		    <li><a href="#_">פרסום</a></li>
@@ -93,7 +108,7 @@
 		<div class="addToItemList">
 			<article id="details">
 				<p>סוג הובלה:</p>
-				<p>העברת דירה</p>
+				<p>פריט בודד</p>
 			</article>
 			<article id="details">
 				<p>מיקום ההובלה:</p>
@@ -121,6 +136,9 @@
 				<button id="publish">פרסום</button>
 			</form>
 		</article>
+		<form action="createNewTrunk_Single4.html">
+			<button id="publishResp" class="goResp">פרסום</button>
+		</form>
 	</section>
 
 	<aside id="calendar" class="hideMe">

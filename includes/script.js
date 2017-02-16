@@ -55,13 +55,13 @@ $("document").ready(function() {
 		localStorage.setItem("setItem", $("#itemList").html());
 	});
 
-	$("#publish").click(function() {
+	$("#publish, #publishResp").click(function() {
 		localStorage.clear();
 	});
 
 	if(window.location.href.indexOf("Step3") > -1 || window.location.href.indexOf("Single3") > -1) {
 		$("#getItems").append(localStorage.getItem("itemsList"));
-		$(".totalItems_amount1").append(localStorage.getItem("itemsListAmount"));
+		$(".totalItems_amount1,  #restTotalItems1").append(localStorage.getItem("itemsListAmount"));
 		$("#SingleItem").append(localStorage.getItem("setItem"));
 		$("#getTrunkLocation").append(localStorage.getItem("trunkLocation"));
 		$("#getHouseType").append(localStorage.getItem("houseType"));
@@ -86,7 +86,7 @@ $("document").ready(function() {
 			$("#itemList").append("<li>" + $(this).html() + "<span class='amount'>1</span></li>");
 		}
 		num = parseInt($.trim($(".totalItems_amount").html()));
-		$(".totalItems_amount").text(++num);
+		$(".totalItems_amount , #restTotalItems").text(++num);
 		// reset input
 		document.getElementById("bigSearch").value = "";
 		$('#update').html("");

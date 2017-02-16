@@ -7,11 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Trunk - LIVE Trunking Finder</title>
 	<!-- Adding Bootstrap CSS & JS -->
+	<!-- Jquery & Javascript link -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/opensanshebrew.css">
 	<!-- CSS Icons FontAwesome -->
 	<script src="https://use.fontawesome.com/965c02018c.js"></script>
+	<script src="includes/script.js"></script>
 	<script src="includes/valid.js"></script>
 	<link rel="stylesheet" href="includes/style.css">
 </head>
@@ -28,7 +31,7 @@
 <header>
 	<div class="container">
 		<a href="#_" id="openSideNav"><i class="fa fa-bars" aria-hidden="true"></i></a>
-		<a href="#" id="logo"></a>
+		<a href="index.html" id="logo"></a>
 		<section>
 			<a href="#"><i class="fa fa-comment hideMe" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
@@ -78,6 +81,21 @@
 		</ul>
 	</nav>
 
+	<div id="respAddItem">
+		<p>לחץ לצפייה בפריט המבוקש</p>
+		<a href="#_" id="respShowItems" data-toggle="modal" data-target=".bd-example-modal-xs">לחץ לצפייה</a>
+	</div>
+	<!-- Small modal -->
+	<div class="modal fade bd-example-modal-xs" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-xs">
+	    <div class="modal-content addedMenu">
+	    	<h3>הפריט המבוקש</h3>
+	    	<ul id="itemList">
+				<!-- Item list from json file -->
+			</ul>
+	    </div>
+	  </div>
+	</div>
 	<section>
 		<ul class="nav nav-wizard hideMe">
 		    <li><a href="#_">פרסום</a></li>
@@ -114,6 +132,9 @@
 					<label>שביר<input type="checkbox"></label>
 				        	<button type="submit">הוסף פריט</button>
 			        	</form>
+			        	<form action="createNewTrunk_Single3.html" onsubmit="return checkSingleItem()">
+						<button id="sendData" class="goResp">המשך</button>
+					</form>
 			</article>
 		</div>
 			<article class="addedMenuSingle hideMe">
@@ -203,8 +224,5 @@
 		</section>
 	</div>
 </footer>
-	<!-- Jquery & Javascript link -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="includes/script.js"></script>
 </body>
 </html>
