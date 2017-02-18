@@ -25,7 +25,7 @@ function checkForItems() {
 };
 
 function checkSingleItem() {
-    if ($("#itemList li").length == 0){
+    if ($(".itemList li").length == 0){
         alert("אנא הכנס פריט");
         return false;
     }else{

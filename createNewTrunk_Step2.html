@@ -90,7 +90,7 @@
 	  <div class="modal-dialog modal-xs">
 	    <div class="modal-content addedMenu">
 	    	<h3>רשימת פרטים</h3>
-	    	<ul id="itemList">
+	    	<ul class="itemList">
 				<!-- Item list from json file -->
 			</ul>
 	    </div>
@@ -133,19 +133,19 @@
 				        	<button type="submit">הוסף פריט</button>
 			        	</form>
 			        <form action="createNewTrunk_Step3.html" onsubmit="return checkForItems()">
-						<button id="sendData" class="goResp">המשך</button>
+						<button class="sendData goResp">המשך</button>
 					</form>
 			</article>
 		</div>
 			<article class="addedMenu hideMe">
 				<p class="addedMenuHead">סה"כ פריטים</p>
-				<ul id="itemList">
+				<ul class="itemList">
 				<!-- Item list from json file -->
 				</ul>
 				<p class="totalItems">סה"כ פריטים</p>
 				<span class="totalItems_amount">0</span>
 				<form action="createNewTrunk_Step3.html" onsubmit="return checkForItems()">
-					<button id="sendData">המשך</button>
+					<button class="sendData">המשך</button>
 				</form>
 			</article>
 	</section>

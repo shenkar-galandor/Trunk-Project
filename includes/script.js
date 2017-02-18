@@ -1,4 +1,35 @@
 $("document").ready(function() {
+    $.ajax({
+        type:"POST",
+    	url: "includes/trunkQuery.php",
+		cache:true,
+		success: function(html){
+                $("#myTrunking").html(html);
+    }});
+	$("#publish,#publishResp").click(function(){
+		var trunkType;
+		var loc = localStorage.getItem("trunkLocation");
+		var dest = localStorage.getItem("trunkDestination");
+		var date = localStorage.getItem("trunkDate");
+        if(window.location.href.indexOf("Single") > -1){
+        	trunkType = "פריט בודד";
+        }else{
+        	trunkType = "הובלת דירה";
+        }
+		$.ajax({
+			url:"includes/trunkInsert.php",
+            type: "POST",
+            data: {
+				trunkT:trunkType,
+				trunkLoc: loc,
+				trunkDest: dest,
+				trunkDate: date,
+				trunkStatus:'ממתין לאישור'},
+            success: function (data) {
+            	console.log(data);
+            }
+        });
+	});
 	//open the side nav
 	$("#openSideNav").click(function () {
         document.getElementById("mySidenav").style.width = "250px";
@@ -47,12 +78,12 @@ $("document").ready(function() {
 		}
 		localStorage.setItem("trunkDate", $("#trunkDate").val());
 	});
-	$("#sendData").click(function() {
-		localStorage.setItem("itemsList", $("#itemList").html());
+	$(".sendData").click(function() {
+		localStorage.setItem("itemsList", $(".itemList").html());
 		localStorage.setItem("itemsListAmount", $(".totalItems_amount").html());
 	});
-	$("#sendSingleData").click(function() {
-		localStorage.setItem("setItem", $("#itemList").html());
+	$(".sendSingleData").click(function() {
+		localStorage.setItem("setItem", $(".itemList").html());
 	});
 
 	$("#publish, #publishResp").click(function() {
@@ -60,7 +91,7 @@ $("document").ready(function() {
 	});
 
 	if(window.location.href.indexOf("Step3") > -1 || window.location.href.indexOf("Single3") > -1) {
-		$("#getItems").append(localStorage.getItem("itemsList"));
+		$(".getItems").append(localStorage.getItem("itemsList"));
 		$(".totalItems_amount1,  #restTotalItems1").append(localStorage.getItem("itemsListAmount"));
 		$("#SingleItem").append(localStorage.getItem("setItem"));
 		$("#getTrunkLocation").append(localStorage.getItem("trunkLocation"));
@@ -83,7 +114,7 @@ $("document").ready(function() {
 		searchItem = $(this).text();
 		isAdd();
 		if(!isAdded) {
-			$("#itemList").append("<li>" + $(this).html() + "<span class='amount'>1</span></li>");
+			$(".itemList").append("<li>" + $(this).html() + "<span class='amount'>1</span></li>");
 		}
 		num = parseInt($.trim($(".totalItems_amount").html()));
 		$(".totalItems_amount , #restTotalItems").text(++num);
@@ -94,18 +125,18 @@ $("document").ready(function() {
 	// Search form for single item
 	$("#updateSingle").on('click','li', function() {
 		searchItem = $(this).text();
-		$("#itemList").html("<li>" + $(this).html() + "<span class='amount'>1</span></li>");
+		$(".itemList").html("<li>" + $(this).html() + "<span class='amount'>1</span></li>");
 		// reset input
 		document.getElementById("bigSearch").value = "";
 		$('#updateSingle').html("");
 	});
 	function isAdd() {
 		curr = 0;
-		for(i=1; i <= $("#itemList li").length ; i++) {
-			if($("#itemList li:nth-child("+i+")").is(":contains("+searchItem+")")) {
+		for(i=1; i <= $(".itemList li").length ; i++) {
+			if($(".itemList li:nth-child("+i+")").is(":contains("+searchItem+")")) {
 				curr  = i;
-				num = parseInt($.trim($("#itemList li:nth-child("+(curr)+") .amount").html()));
-				$("#itemList li:nth-child("+curr+") .amount").html(++num);
+				num = parseInt($.trim($(".itemList li:nth-child("+(curr)+") .amount").html()));
+				$(".itemList li:nth-child("+curr+") .amount").html(++num);
 				isAdded = true;
 				return true;
 			}
@@ -119,9 +150,9 @@ function addItem() {
 	// reset form inputs
 	document.getElementById('productName').value = "";
 	document.getElementById('productDesc').value = "";
-	$("#itemList").append("<li>" + item + "<span class='amount'>1</span></li>");
+	$(".itemList").append("<li>" + item + "<span class='amount'>1</span></li>");
     num = parseInt($.trim($(".totalItems_amount").html()));
-    $(".totalItems_amount").text(++num);
+    $(".totalItems_amount, #restTotalItems").text(++num);
 }
 function addSingleItem() {
 	var item = "<p class=item>" + document.getElementById('productName').value; + "</p>";
@@ -129,7 +160,7 @@ function addSingleItem() {
 	// reset form inputs
 	document.getElementById('productName').value = "";
 	document.getElementById('productDesc').value = "";
-	$("#itemList").html("<li>" + item + "<span class='amount'>1</span></li>");
+	$(".itemList").html("<li>" + item + "<span class='amount'>1</span></li>");
 }
 // Google map API
 function initMap() {

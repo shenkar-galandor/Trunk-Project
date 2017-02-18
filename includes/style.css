@@ -635,7 +635,7 @@ article form input[type=search]{
     color: #033076;
     font-weight: bold;
 }
-#itemList i {
+.itemList i {
 	float: left;
 }
 .totalItems span{
@@ -990,10 +990,10 @@ article form input[type=search]{
 	.addedMenu {
 		width: 100%;
 	}
-	#itemList .item {
+	.itemList .item {
 		font-size: 22px;
 	}
-	#itemList .desc {
+	.itemList .desc {
 		font-size: 15px;
 	}
 	#wizard .form-group {
