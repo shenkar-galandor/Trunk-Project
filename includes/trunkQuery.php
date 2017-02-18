@@ -10,6 +10,8 @@ if(mysqli_connect_errno()){
 	die("DB connection failed: " . mysqli_connect_errno() . "(" . mysqli_connect_errno() . ")");
 	echo "connection fail!";
 }
+// Change character set to utf8
+mysqli_set_charset($connection,"utf8");
 
 $query = "SELECT * FROM tbl_210_myTrunks";
 
@@ -24,7 +26,7 @@ echo "<table class='table table-bordered myTrunkTable'>
 	        <th>סוג הובלה</th>
 	        <th>מיקום</th>
 	        <th>יעד</th>
-	        <th>תאריך</th>
+	        <th class='hideMe'>תאריך</th>
 	        <th>הצעות</th>
 	        <th>סטטוס הובלה</th>
 	      </tr>
@@ -35,9 +37,9 @@ echo "<table class='table table-bordered myTrunkTable'>
 	        <td>מעבר דירה</td>
 	        <td>התפוז 15 אשקלון</td>
 	        <td>דרך יבנה 17 רחובות</td>
-	        <td>25/08/16</td>
-	        <td class='text-center'><button type='button' id='#myModal' data-toggle='modal' data-target='#myModal'><p>חר הצעה</p><span>1</span></button></td>
-	        <td class='awating'>ממתין לאישור</td>
+	        <td class='hideMe'>25/08/16</td>
+	        <td class='text-center'><button type='button' id='#myModal' class='exit' data-toggle='modal' data-target='#myModal'><p>בחר הצעה</p><span>1</span></button></td>
+	        <td id='changed' class='awating'>ממתין לאישור</td>
 	      </tr>";
 
 $status = null;
@@ -47,7 +49,7 @@ while ($row = mysqli_fetch_assoc($result)){
 	echo '<td>'.$row["trunkType"].'</td>';
 	echo '<td>'.$row["trunkLocation"].'</td>';
 	echo '<td>'.$row["trunkDest"].'</td>';
-	echo '<td>'.$row["trunkDate"].'</td>';
+	echo '<td class="hideMe">'.$row["trunkDate"].'</td>';
 	echo '<td class="text-center"><button type="button" id="#myModal" data-toggle="modal" data-target="#myModal"><p>בחר הצעה</p></button></td>';
 	if($row["trunkStatus"] == "מאושר") {
 		$status = "approved";

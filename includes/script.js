@@ -6,6 +6,11 @@ $("document").ready(function() {
 		success: function(html){
                 $("#myTrunking").html(html);
     }});
+    $(".exit").click(function() {
+		$("#changed").html("מאושר");
+		$("#changed").addClass("approved");
+		$(".exit span").remove();
+	});
 	$("#publish,#publishResp").click(function(){
 		var trunkType;
 		var loc = localStorage.getItem("trunkLocation");

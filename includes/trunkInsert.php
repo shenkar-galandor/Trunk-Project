@@ -11,7 +11,7 @@ if(mysqli_connect_errno()){
 	die("DB connection failed: " . mysqli_connect_errno() . "(" . mysqli_connect_errno() . ")");
 	echo "connection fail!";
 }
-
+mysqli_set_charset($connection,"utf8");
 
 $trunkType = $_POST['trunkT'];
 $trunkLoc = $_POST['trunkLoc'];
